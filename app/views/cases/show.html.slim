@@ -1,0 +1,13 @@
+p
+  strong Name:
+  = @case.name
+p
+  strong User:
+  = @case.user
+p
+  strong Body:
+  = @case.body
+
+= link_to 'Edit', edit_case_path(@case)
+'|
+= link_to 'Back', cases_path
