@@ -1,0 +1,25 @@
+h1 Listing consultations
+
+table
+  thead
+    tr
+      th Name
+      th Body
+      th User
+      th
+      th
+      th
+
+  tbody
+    - @consultations.each do |consultation|
+      tr
+        td = consultation.name
+        td = consultation.body
+        td = consultation.user
+        td = link_to 'Show', consultation
+        td = link_to 'Edit', edit_consultation_path(consultation)
+        td = link_to 'Destroy', consultation, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Consultation', new_consultation_path

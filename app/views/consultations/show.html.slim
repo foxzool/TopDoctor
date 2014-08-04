@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Name:
+  = @consultation.name
+p
+  strong Body:
+  = @consultation.body
+p
+  strong User:
+  = @consultation.user
+
+= link_to 'Edit', edit_consultation_path(@consultation)
+'|
+= link_to 'Back', consultations_path

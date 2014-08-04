@@ -1,9 +1,9 @@
 # Read about factories at https://github.com/thoughtbot/factory_girl
 
 FactoryGirl.define do
-  factory :case do
+  factory :consultation do
     name "MyString"
-    user ""
     body "MyText"
+    user nil
   end
 end

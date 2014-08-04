@@ -2,15 +2,15 @@ zh-CN:
   activerecord:
     models:
       user: 用户
-      case: 病例
+      consultation: 会诊
     attributes:
       user:
         name: 用户名
         email: 邮箱
         password: 密码
         password_confirmation: 密码确认
-      case:
-        name: 病例名
+      consultation:
+        name: 会诊名
         body: 描述
 
   date:

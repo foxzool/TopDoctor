@@ -1,9 +1,10 @@
-= simple_form_for(@case) do |f|
+= simple_form_for(@consultation) do |f|
   = f.error_notification
 
   .form-inputs
     = f.input :name
     = f.input :body
+    /= f.association :user
 
   .form-actions
     = f.button :submit

@@ -1,5 +1,6 @@
 - if user_signed_in?
-  li = link_to '添加病例', new_case_path
+  li = link_to '我要会诊', new_consultation_path
+  li = link_to '会诊记录', consultations_path
   li = link_to '账号管理', edit_user_registration_path
   li = link_to '登出', destroy_user_session_path, :method=>'delete'
 - else

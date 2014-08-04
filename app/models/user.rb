@@ -1,8 +1,8 @@
 class User < ActiveRecord::Base
 
-  has_many :cases
+  has_many :consultations
 
-  enum role: [:user, :vip, :admin]
+  enum role: [:user, :doctor, :admin]
   after_initialize :set_default_role, :if => :new_record?
 
   def set_default_role

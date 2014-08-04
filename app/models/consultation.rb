@@ -1,4 +1,4 @@
-class Case < ActiveRecord::Base
+class Consultation < ActiveRecord::Base
   belongs_to :user
 
   validates_presence_of :name, :body
