@@ -3,7 +3,7 @@
   li = link_to '会诊记录', consultations_path
   li = link_to '账号管理', edit_user_registration_path
   - if current_user.admin?
-    li = link_to '用户管理', users_path
+    li = link_to '后台管理', admin_path
   li = link_to '登出', destroy_user_session_path, :method=>'delete'
 - else
   li = link_to '登录', new_user_session_path

@@ -1,18 +1,17 @@
 table.table
   thead
     tr
-      th #
+      th ID
       th 名称
-      th 发起时间
-      th 最后回复时间
+      th 创建时间
+      th
       th
       th
 
   tbody
-    - @consultations.each_with_index  do |consultation, i|
+    - @consultations.each  do |consultation|
       tr
-        td = i + 1
+        td = consultation.id
         td = consultation.name
         td = l consultation.created_at
-        td = l consultation.updated_at
         td = link_to '点击查看详情', consultation

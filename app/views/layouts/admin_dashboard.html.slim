@@ -15,4 +15,14 @@ html
       .container
         .message
           == render 'layouts/messages'
-        == yield
+        .row
+          .col-md-3
+            ul.nav.nav-pills.nav-stacked role='tablist'
+              li role='presentation' class=('active' if current_page?(admin_path))
+                = link_to '首页', admin_path
+              li role='presentation' class=('active' if current_page?(admin_users_path))
+                = link_to '用户管理', admin_users_path
+              li role='presentation' class=('active' if current_page?(admin_consultations_path))
+                = link_to '会诊管理', admin_consultations_path
+          .col-md-9
+            == yield

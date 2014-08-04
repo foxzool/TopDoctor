@@ -1,4 +1,5 @@
-class ConsultationsController < ApplicationController
+class Admin::ConsultationsController < ApplicationController
+  layout 'admin_dashboard'
   before_action :set_consultation, only: [:show, :edit, :update, :destroy]
 
   # GET /consultations
